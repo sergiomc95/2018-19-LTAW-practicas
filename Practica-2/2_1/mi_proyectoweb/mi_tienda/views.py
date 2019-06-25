@@ -4,16 +4,17 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from mi_tienda.models import Product
+from mi_tienda.models import ClaseA
+from mi_tienda.models import Berlinas
 
 # Create your views here.
 def home_view (request):
-    return render(request, "index.html", {})
+    return render(request, "index.html", {'user':'client'})
 
-def list(request):
-    objects = Product.objects.all()
-    html = "<p>Listado de articulos</p>"
-    for elt in objects:
-        print(elt.name)
-        html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
-    return HttpResponse(html)
+def utilitarios_view(request):
+    claseA = ClaseA.objects.all()
+    return render(request,"ClaseA.html", {'products': claseA})
+
+def berlinas_view(request):
+    berlinas = Berlinas.objects.all()
+    return render(request,"Berlinas.html", {'products': berlinas})

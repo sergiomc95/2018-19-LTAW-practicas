@@ -1,17 +1,59 @@
 {% load staticfiles %}
 
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>MI TIENDA</title>
+    <title>CorchonCar</title>
     <link rel="stylesheet" href="{% static 'mi-css.css'%}">
-     <script src="{% static 'mi-js.js' %}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   </head>
-  <body onload="main();">
-    <p>BIENVENIDO A MI TIENDA con estilo y js</p>
-    <img src="/static/logo-urjc.png" alt="NOPE" id="logo">
-    <br>
-    <button type="button" id="boton">Click me</button>
-  </body>
-</html>
+
+  <body>
+    <center>
+      <img src="/static/main.jpg" alt="LOGO" height="300" width="800">
+      <div class="topnav">
+          <a href="ClaseA.html">Utilitarios</a>
+          <a>//</a>
+          <a href="Berlinas.html">Berlinas</a>
+          <a>//</a>
+      </div>
+    </center>
+      <div>
+          <a href="ClaseA.html">
+            <p class="Tittle">VEHICULOS UTILITARIOS</p>
+          </a>
+          <center>
+            <a href="ClaseA.html"><button>
+                <img src="/static/a1.2.jpg" alt="product1.js" style="width:400px;height:400px">
+            </button></a>
+            <a href="ClaseA.html"><button>
+              <img src="/static/AFocus.jpg" alt="product2.js" style="width:400px;height:400px">
+            </button></a>
+          </center>
+      </div>
+
+      <div>
+          <a href="Berlinas.html">
+            <p class="Tittle">BERLINAS</p>
+          </a>
+          <center>
+            <a href="Berlinas.html"><button>
+                <img src="/static/B508.jpg" alt="product1.js" style="width:400px;height:400px">
+            </button></a>
+            <a href="Berlinas.html"><button>
+              <img src="/static/BMW.jpg" alt="product2.js" style="width:400px;height:400px">
+            </button></a>
+          </center>
+      </div>
+
+
+
+
+
+
+
+
+    </body>
+  </html>

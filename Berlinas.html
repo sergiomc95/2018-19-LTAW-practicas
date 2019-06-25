@@ -1,0 +1,34 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Berlinas</title>
+    <link rel="stylesheet" href="{% static 'mi-css.css'%}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <center>
+      <a href="./index.html">
+        <img src="/static/logob.png" alt="LOGO" height="3s00" width="300">
+      </a>
+    <table>
+
+      {% for product in products%}
+      <center>
+      <td><img src='{{ product.image }}' width="300" height="300"></td>
+          <tr>
+            <td><center>{{product.name}}</center></td>
+          </tr>
+          <tr>
+            <td><center>PRICE: {{product.price}} EUROS</center></td>
+          </tr>
+      {% endfor %}
+    </table>
+    </center>
+
+  </body>
+</html>
